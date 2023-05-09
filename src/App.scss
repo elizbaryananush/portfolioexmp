@@ -1,0 +1,438 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+$background: #f5f6fa;
+$text: #9c9c9c;
+$input-bg-color: #fff;
+$input-text-color: #a3a3a3;
+$button-bg-color: #7f8ff4;
+$button-text-color: #fff;
+
+body {
+    max-width: 100%;
+    height: 2000px;
+    overflow: overlay;
+    padding-bottom: 200px;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.2);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+
+.none {
+    display: none;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+.navbar {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+
+    .navbar-brand {
+        font-size: 60px;
+        font-weight: 600;
+        padding-left: 100px;
+        color: white;
+    }
+
+    .navbar-nav {
+        column-gap: 60px;
+
+        li {
+            font-size: 20px;
+
+            a {
+                color: white;
+            }
+        }
+    }
+
+    .social-network {
+        display: flex;
+        column-gap: 10px;
+
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            margin: 0;
+            width: 60px !important;
+            height: 60px !important;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px rgb(210, 210, 210) solid;
+            border-radius: 50%;
+
+            svg {
+                padding: 0;
+                margin: 0;
+                width: 30px;
+                height: fit-content;
+                fill: white;
+            }
+
+            &:hover {
+                transform: scale(0.99);
+            }
+
+            &:active {
+                transform: scale(0.9);
+            }
+        }
+
+        button {
+            width: 200px;
+            margin-left: 30px;
+            font-size: 18px;
+            font-weight: 500;
+            background-color: transparent;
+            border: 2px white solid;
+            color: white;
+            cursor: context-menu;
+
+            &:hover {
+                transform: scale(0.99);
+            }
+
+            &:active {
+                transform: scale(0.97);
+            }
+        }
+
+    }
+}
+
+.navbar2 {
+    backdrop-filter: blur(5px);
+    z-index: 2;
+}
+
+.header {
+    height: 100vh;
+
+    .background {
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+        position: absolute;
+        z-index: -1;
+        position: fixed;
+    }
+
+    .background2 {
+        position: absolute;
+        height: 70%;
+        top: 25%;
+        right: 5%;
+        z-index: -1;
+    }
+
+    .left-part {
+        padding-left: 95px;
+        display: grid;
+        width: 50%;
+        position: absolute;
+        top: 25%;
+        z-index: 1;
+        color: white;
+
+        div {
+            border: 1px white solid;
+            width: fit-content;
+            padding: 0.5rem 1rem;
+            background: linear-gradient(90deg, rgba(128, 0, 128, 0.296), rgba(0, 0, 255, 0.277));
+        }
+
+        h1 {
+            font-size: 90px;
+        }
+
+        p {
+            max-width: 80%;
+            margin: 30px 0;
+            line-height: 30px;
+        }
+
+        a {
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+        }
+
+        svg {
+            width: 30px;
+            height: 30px;
+            fill: white;
+            margin-left: 10px;
+            margin-bottom: 2px;
+        }
+
+        .bottom {
+            border: 0;
+            cursor: pointer;
+        }
+    }
+}
+
+.skills {
+    text-align: center;
+    background-color: rgba(22, 26, 51, 0.217);
+    border: 1px rgb(134, 134, 134) solid;
+    backdrop-filter: blur(5px);
+    z-index: 1;
+    height: 80vh;
+    border-radius: 50px;
+    margin-top: 100px;
+    display: grid;
+
+    .Title {
+        padding: 2rem;
+        font-size: 70px;
+        color: white;
+    }
+
+    p {
+        color: white;
+        font-size: 20px;
+        max-width: 60%;
+        margin: 0 auto;
+    }
+
+    svg {
+        width: 70px;
+        position: absolute;
+        margin-top: 140px;
+        fill: white;
+        z-index: 1;
+    }
+
+    .right {
+        right: 0;
+    }
+
+
+
+    .slider {
+        position: relative;
+        display: flex;
+        overflow: hidden;
+        white-space: nowrap;
+        margin: auto;
+
+        div {
+            min-width: calc(100%/3);
+            padding: 3rem;
+            text-align: center;
+
+            img {
+                width: 80%;
+            }
+
+            h1 {
+                margin-top: 30px;
+                color: white;
+            }
+        }
+    }
+}
+
+.projects {
+    padding: 2rem;
+    margin-top: 300px;
+    background-color: rgba(22, 26, 51, 0.217);
+    border: 1px rgb(134, 134, 134) solid;
+    backdrop-filter: blur(5px);
+
+    .top-part {
+        display: flex;
+        justify-content: center;
+        width: fit-content;
+        margin: 0 auto;
+        border: 1px white solid;
+        border-radius: 50px;
+
+        .tabs {
+            background-color: transparent;
+            padding: 1rem 2rem;
+            cursor: pointer;
+            color: white;
+        }
+
+        .active-tab {
+            cursor: pointer;
+            background: linear-gradient(90deg, rgba(128, 0, 128, 0.296), rgba(0, 0, 255, 0.277));
+            border-radius: 50px;
+            border: 1px white solid;
+        }
+    }
+
+    .bottom-part {
+        .page1 {
+            text-align: center;
+
+            h1 {
+                color: white;
+                margin: 2rem;
+            }
+
+            .content {
+                width: fit-content;
+                display: grid;
+                grid-template-columns: auto auto auto;
+                gap: 20px;
+                margin: 0 auto;
+
+            }
+        }
+
+        .page {
+            text-align: center;
+            color: white;
+            padding: 2rem;
+        }
+    }
+}
+
+.contact {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(90deg, rgb(191, 0, 191), purple, blue);
+    margin-top: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+
+    img {
+        z-index: 1;
+        width: 40%;
+    }
+
+    .right-part {
+        vertical-align: start;
+        max-width: fit-content;
+        right: 0;
+        display: grid;
+        gap: 20px;
+
+        .top-part {
+            display: grid;
+            grid-template-columns: auto auto;
+            gap: 20px;
+
+            .input {
+                width: 400px;
+                height: 100px;
+                border-radius: 30px;
+                background-color: rgba(255, 255, 255, 0.4);
+                border: 1px white solid;
+                font-size: 25px;
+                padding: 1rem;
+                color: black;
+
+                &::placeholder {
+                    color: white;
+                }
+            }
+
+        }
+
+        .input2 {
+            height: 200px;
+            border-radius: 30px;
+            background-color: rgba(255, 255, 255, 0.4);
+            border: 1px white solid;
+            font-size: 25px;
+            padding: 1rem;
+            color: black;
+
+            &::placeholder {
+                color: white;
+            }
+        }
+
+        button {
+            width: 200px;
+            height: 70px;
+            font-size: 28px;
+            font-weight: 800;
+            border: 0;
+
+            &:hover {
+                transform: scale(0.99);
+            }
+
+            &:active {
+                transform: scale(0.97);
+            }
+        }
+    }
+}
+
+.footer {
+display: flex;
+justify-content: center;
+    .social-network {
+        display: flex;
+        column-gap: 10px;
+        width: fit-content;
+
+        div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 0;
+            margin: 2rem;
+            width: 60px !important;
+            height: 60px !important;
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px rgb(210, 210, 210) solid;
+            border-radius: 50%;
+
+            svg {
+                padding: 0;
+                margin: 0;
+                width: 30px;
+                height: fit-content;
+                fill: white;
+            }
+
+            &:hover {
+                transform: scale(0.99);
+            }
+
+            &:active {
+                transform: scale(0.9);
+            }
+        }
+    }
+
+}
